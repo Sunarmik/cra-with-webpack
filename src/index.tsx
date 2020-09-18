@@ -5,11 +5,20 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./theme";
+import { Provider } from "react-redux";
+import configureStore from "./store/store";
+import CssBaseline from "@material-ui/core/CssBaseline";
+
+const store = configureStore();
+
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme.organicTheme}>
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProvider theme={theme.organicTheme}>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
