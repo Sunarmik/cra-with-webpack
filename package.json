@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^5.6.4",
+    "@material-ui/core": "^4.11.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -13,14 +14,19 @@
     "@types/react-dom": "^16.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate-declaration": "npx typescript src/**/*.tsx --declaration --allowJs --emitDeclarationOnly --outDir types"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,6 +44,10 @@
     ]
   },
   "devDependencies": {
+    "@types/material-ui": "^0.21.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-router-dom": "^5.1.5",
+    "@types/redux": "^3.6.0",
     "mini-css-extract-plugin": "^0.11.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack-bundle-analyzer": "^3.9.0"
